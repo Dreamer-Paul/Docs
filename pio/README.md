@@ -1,6 +1,6 @@
 # 安装
 
-推荐使用 Typecho 的最新正式版本安装本插件，并采用 PHP 7x 作为开发环境。
+推荐使用 Typecho 的最新正式版本安装本插件，并采用 PHP 7x 作为生产环境。
 
 ## 全新安装
 
@@ -12,25 +12,17 @@
 
 将文件夹更名为 `Pio` 以确保插件可以正常工作
 
-登录你的 Typecho 后台，在导航栏找到 控制台 > 插件 > Pio > 启用
+登录你的 Typecho 后台，在导航栏找到 **控制台** > **插件** > **Pio** > **启用**
 
 ## 更新安装
 
-打开插件的选项，将里面的设置内容逐一拷贝到记事本
+打开插件的选项，将里面的设置内容逐一拷贝到记事本。
 
-禁用本插件，并删除旧版插件原有的文件
+禁用本插件，并删除旧版插件原有的文件。
 
-从 [GitHub](https://github.com/Dreamer-Paul/Pio) 上获取本项目。
+按照全新安装的步骤获取压缩包并安装。
 
-将插件压缩包上传到你的网站。Typecho 插件的默认存放路径在 `/usr/plugins`
-
-解压主题的压缩包文件，默认得到一个文件夹，应该为 `Pio-master`
-
-将文件夹更名为 `Pio` 以确保插件可以正常工作
-
-登录你的 Typecho 后台，在导航栏找到 控制台 > 插件 > Pio > 启用
-
-将设置内容逐一填入文本框内
+将记事本内的设置内容逐一填入插件设置的文本框内。
 
 
 # 常见问题
@@ -101,7 +93,7 @@ plugins/Pio/models
 
 > 其他问题
 
-可以加入我的企鹅群（[657692292](https://jq.qq.com/?_wv=1027&k=4Buhabv)）联系群主即时提问交流，也可在 GitHub 的 [Issues](https://github.com/Dreamer-Paul/Pio/issues) 区提出。
+如果上述内容不符合你所遇到的问题，请加入我的企鹅群（[657692292](https://jq.qq.com/?_wv=1027&k=4Buhabv)）联系群主即时提问交流，也可在 GitHub 的 [Issues](https://github.com/Dreamer-Paul/Pio/issues) 区提出。
 
 
 # 后台设置
@@ -313,6 +305,7 @@ plugins/Pio/models
 ```json
 示例：".post-item h3"
 ```
+
 
 # 方法
 
