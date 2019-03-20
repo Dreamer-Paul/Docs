@@ -87,7 +87,7 @@
 在这里填入一张图片地址，不填则显示纯色背景
 
 ```
-https://paul.ren/static/bg.jpg
+默认：无
 ```
 
 ## 社交链接
@@ -119,8 +119,8 @@ https://paul.ren/static/bg.jpg
 ```css
 // 让看板娘在夜间模式下变暗
 .neon .pio-container{
-	-webkit-filter: brightness(.7);
-	filter: brightness(.7)
+    -webkit-filter: brightness(.7);
+    filter: brightness(.7)
 }
 ```
 
@@ -176,12 +176,40 @@ https://paul.ren/static/bg.jpg
 - 阅读数 `赞助版`
 
 
+# 组件要求
+
+## 代码高亮
+
+- 不能与其他插件共用（例 `Highlight.js`）
+- 需要在文章中指定语言（按照下面的示例即可）
+
+
+    ```php
+    echo "Hello Paul!";
+    ```
+
+或者是...
+
+	```javascript
+	ks.notice("It's Dreamer-Paul!", {
+		color: "yellow"
+	});
+	```
+
+	
 # 参考设置
 
-为了让主题效果最大化的完美呈现，你可以选择参考这里所提供的一些 Typecho 推荐设置，并替换掉默认设置。
+为了让主题效果最大化的完美呈现，你可以选择参考这里所提供的一些 Typecho 设置。
 
 ## 日期格式
 
-在导航栏找到 **设置** > **评论** > **评论日期格式** 填写 `Y.m.d`
+在 Typecho 后台的导航栏找到 **设置** > **评论** > **评论日期格式** 填写 `Y.m.d`
 
 在导航栏找到 **设置** > **阅读** > **文章日期格式** 填写 `Y.m.d`
+
+## 文章输出
+
+在 Typecho 后台的导航栏找到 **设置** > **阅读**
+
+- 文章列表数目：`6`
+- 每页文章数目：`6`
