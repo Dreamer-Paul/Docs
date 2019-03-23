@@ -91,6 +91,30 @@ plugins/Pio/models
  └─ model.json（配置文件）
 ```
 
+> 点击页面或模型，控制台就会出现报错
+
+答：这是由于模型的 `model.json` 缺少 `hit_areas_custom` 属性导致的，目前比较常见的报错是下面这种。你可以手动添加相关代码进行修复。
+
+```javascript
+l2d.js:1 Uncaught TypeError: Cannot read property '0' of undefined
+    at o.r.hitTestSimpleCustom (l2d.js:1)
+    at o.hitTestCustom (l2d.js:1)
+    at o.tapEvent (l2d.js:1)
+    at p (l2d.js:1)
+    at g (l2d.js:1)
+```
+
+在 `model.json` 添加下列代码即可解决。
+
+```json
+"hit_areas_custom":{
+    "head_x":[-0.35, 0.6],
+    "head_y":[0.19, -0.2],
+    "body_x":[-0.3, -0.25],
+    "body_y":[0.3, -0.9]
+}
+```
+
 > 其他问题
 
 如果上述内容不符合你所遇到的问题，请加入我的企鹅群（[657692292](https://jq.qq.com/?_wv=1027&k=4Buhabv)）联系群主即时提问交流，也可在 GitHub 的 [Issues](https://github.com/Dreamer-Paul/Pio/issues) 区提出。
