@@ -137,7 +137,7 @@
 如果想在文章后面显示作者信息及版权相关提示，可在此填写内容。支持 HTML。
 
 ```html
-特立独行的一只前端狗。本站未注明转载的文章均为原创，并采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow">CC BY-NC-SA 4.0</a> 授权协议，<span style="color: #E91E63">转载请注明来源</span>，谢谢！如本站内容对你有所帮助的话，不妨 <a href="https://paugram.com/about.html#donate">捐助支持</a> 一下？
+特立独行的一只前端狗。本站未注明转载的文章均为原创，并采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow">CC BY-NC-SA 4.0</a> 授权协议，<span style="color: #E91E63">转载请注明来源</span>，谢谢！如本站内容对你有所帮助的话，不妨 <a href="https://paul.ren/donate">捐助支持</a> 一下？
 ```
 
 ## 夜间模式
@@ -196,7 +196,7 @@
 	});
 	```
 
-	
+
 # 参考设置
 
 为了让主题效果最大化的完美呈现，你可以选择参考这里所提供的一些 Typecho 设置。
