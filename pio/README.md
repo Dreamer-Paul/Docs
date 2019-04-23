@@ -1,6 +1,8 @@
 # 安装
 
-推荐使用 Typecho 的最新正式版本安装本插件，并采用 PHP 7x 作为生产环境。
+推荐使用 Typecho 的最新正式版本安装本插件，并采用 PHP 7x 作为生产环境。如果你喜欢本项目，不妨为我提供微薄的一份赞助，支持一下吧！
+
+![赞助奇趣保罗](img/donate.jpg)
 
 ## 全新安装
 
@@ -23,6 +25,12 @@
 按照全新安装的步骤获取压缩包并安装。
 
 将记事本内的设置内容逐一填入插件设置的文本框内。
+
+## 指导视频
+
+你是 Typecho 新手吗？不妨先观看一下本视频后再进行操作吧！[访问原站观看](https://www.bilibili.com/video/av47815909) 将支持展示 CC 字幕！
+
+<iframe src="//player.bilibili.com/player.html?aid=47815909&amp;cid=83754339&amp;page=1" scrolling="no" allowfullscreen="true" style="width: 100%; height: 35em; height: 60vmin"> </iframe>
 
 
 # 常见问题
