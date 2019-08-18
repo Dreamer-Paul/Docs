@@ -2,65 +2,77 @@
 <html lang="zh-cmn-Hans">
 <head>
     <meta charset="UTF-8">
-    <title>保罗｜作品文档</title>
+    <title>保罗｜文档站</title>
+    <link href="static/icon.png" rel="icon" sizes="192x192"/>
     <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1"/>
     <style>
-        html, body, main{
-            height: 100%;
-        }
-
-        body{
-            margin: 0;
-            color: #333;
-            user-select: none;
-            font: lighter 20px "微软雅黑";
-        }
-        a{
-            color: #3498db;
-            text-decoration: none;
-        }
-        h1{
-            margin-top: 0;
-            font-size: 3.5em;
-        }
-        main{
+        html, body{ height: 100% }
+        html{
+            color: #763300;
             display: table;
             margin: 0 auto;
+            user-select: none;
         }
-        .content{
-            padding: 3em 0;
-            text-align: center;
+        body{
+            width: 50%;
+            padding: 1em;
+            max-width: 50em;
             display: table-cell;
             vertical-align: middle;
+            font: 16px "思源黑体 CN";
+            background: url(static/bg.png) center #a9db22;
         }
-        .btn{
+
+        a{
+            color: #b74f00;
+            text-decoration: none;
+            transition: color .3s;
+        }
+
+        p{ margin: 0 0 2em }
+        p:last-child{ margin-bottom: 0 }
+
+        h1{
+            font-size: 2.5em;
+            margin: 0 0 .75em;
+            text-align: center;
+        }
+
+        main{
+            padding: 1.5em;
+            border-radius: 1em;
+            box-shadow: 0 0 .5em rgba(0, 0, 0, .5);
+            border: .25em rgba(169, 219, 34, .3) solid;
+            background: url(static/girl.png) bottom right  no-repeat #fff;
+        }
+
+        .item{
+            width: 8em;
             color: #fff;
-            padding: .75em 1em;
-            background: #3498db;
-            border-radius: 1.5em;
-            display: inline-block;
-            transition: opacity .3s, transform .3s;
+            display: block;
+            padding: .75em;
+            border-radius: 1em;
+            text-align: center;
+            background: #b74f00;
+            margin-bottom: .75em;
+            transition: opacity .3s;
         }
-        .btn:hover{
-            transform: scale(1.1);
-        }
-        .btn:active{
-            opacity: .7;
-        }
+        .item:hover{ opacity: .8 }
     </style>
 </head>
 <body>
 <main>
-    <div class="content">
-        <h1>:)</h1>
-        <p>嗨，朋友！欢迎来到我的作品文档站~</p>
-        <p>本站共收录了三个作品的文档，欢迎查阅！</p>
-		<p>
-			<a class="btn" href="https://docs.paul.ren/single">Single 主题</a>
-			<a class="btn" href="https://docs.paul.ren/pio">看板娘插件</a>
-			<a class="btn" href="https://docs.paul.ren/fantasy">Fantasy 主题</a>
-		</p>
-    </div>
+    <h1>保罗 の 文档站</h1>
+    <p>
+        <a class="item" href="https://docs.paul.ren/single">Single 主题</a>
+        <a class="item" href="https://docs.paul.ren/fantasy">Fantasy 主题</a>
+        <a class="item" href="https://docs.paul.ren/pio">看板娘插件</a>
+    </p>
+    <p><a href="https://paul.ren">返回首页</a></p>
 </main>
+<script>
+    // 采用了若叶女孩的官网 https://wakabagirl.com 作为基础设计
+    console.log("%c Paul's Docs %c https://paul.ren ","color: #fff; margin: 1em 0; padding: 5px 0; background: #b75f00;","margin: 1em 0; padding: 5px 0; background: #efefef;");
+</script>
 </body>
 </html>

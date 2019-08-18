@@ -4,8 +4,10 @@
 
 ## 作品列表
 
- - [Single 主题](https://docs.paul.ren/single)
- - [Pio 看版娘插件](https://docs.paul.ren/pio)
+- [Single 主题](https://docs.paul.ren/single)
+- [Fantasy 主题](https://docs.paul.ren/fantasy)
+- [看版娘插件](https://docs.paul.ren/pio)
+ 
 
 ## 开源协议
 
