@@ -1,0 +1,101 @@
+# 安装
+
+你可以通过代码直接引用或者通过 Typecho 插件的方式快速使用。如果你喜欢本项目，不妨为我提供微薄的一份赞助，支持一下吧！
+
+![赞助奇趣保罗](img/donate.jpg)
+
+## 独立使用
+
+在网页 `head` 标签引用项目的 CSS 文件 `SQPlayer.css`：
+
+```html
+<head>
+...
+<link href="SQPlayer.css" rel="stylesheet" type="text/css"/>
+...
+</head>
+```
+
+在网页 `body` 标签内的最后一行引用项目的 JS 文件 `SQPlayer.js`：
+
+```html
+<body>
+...
+<script src="SQPlayer.js"></script>
+</body>
+```
+
+在网页 `body` 标签内插入一个 `sqp` 标签：
+
+```html
+<body>
+...
+<sqp></sqp>
+...
+</body>
+```
+
+如果使用 `data-163` 属性引用播放器，就写成这样，其中 `23682511` 就是一首歌的 ID。
+
+```html
+<sqp data-163="23682511"></sqp>
+```
+
+如果使用静态方法引用播放器，就需要同时编写四个属性。
+
+```html
+<sqp data-title="Crimson & Clover" data-artist="Tommy James" data-cover="封面链接" data-link="歌曲链接"></sqp>
+```
+
+其他属性可以参考本文档的 [属性](#属性) 节点。
+
+## 使用插件
+
+> 使用保罗的 Typecho 插件，你就可以快速给自己的博客添加播放器！
+
+### 全新安装
+
+从 [GitHub](https://github.com/Dreamer-Paul/Square-Player) 上获取本项目。
+
+将插件压缩包上传到你的网站。Typecho 插件的默认存放路径在 `/usr/plugins`
+
+解压插件的压缩包文件，默认得到一个文件夹，应该为 `Square-Player-master`
+
+将文件夹更名为 `SQP` 以确保插件可以正常工作
+
+登录你的 Typecho 后台，在导航栏找到 **控制台** > **插件** > **Square Player** > **启用**
+
+### 调用播放器
+
+在你的文章里编写如下代码，即可自动根据该网易云音乐 ID 获取信息。
+
+```html
+!!!
+<sqp data-163="23682511"></sqp>
+!!!
+```
+
+# 属性
+
+Square Player 支持以下属性，它们分别的意义是：
+
+属性名|用途
+------|----
+`left`|至左显示
+`data-title`|歌曲名，用于自定义歌曲
+`data-artist`|艺术家，用于自定义歌曲
+`data-cover`|专辑封面图片链接，用于自定义歌曲
+`data-link`|歌曲地址，用于自定义歌曲
+`data-163`|网易云音乐的 ID 或歌名，如果编写了网易云 ID，将忽略以上歌曲设置
+
+将以上属性放在 `<sqp>` 标签内即可生效。
+
+# 方法
+
+## init
+
+Square Player 默认会遍历整个页面，如果你的网站使用了 PJAX 技术，不妨试试以下方法重载播放器？
+
+```javascript
+SQP_Extend.init();
+```
