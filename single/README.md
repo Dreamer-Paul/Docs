@@ -160,6 +160,14 @@
 
 ![底部信息栏](/img/footer.jpg)
 
+## 推荐文章 ID
+
+在这里填写指定的文章 ID 后，将会覆盖底部的 “热门文章” 信息栏。填写格式如下，采用英文逗号和空格 `, ` 作为分隔。
+
+```
+60, 99, 103, 110, 122, 135
+```
+
 ## 首页、存档页属性显示
 
 在首页、存档页（按日期、分类展示文章的均为存档页）的每篇文章标题下，设置显示文章的一些信息
@@ -182,7 +190,7 @@
 
 ## 代码高亮
 
-- 不能与其他插件共用（例 `Highlight.js`）
+- 不能与其他插件共用，例如 `Highlight.js`
 - 需要在文章中指定语言（按照下面的示例即可）
 
 
@@ -197,7 +205,37 @@
 		color: "yellow"
 	});
 	```
+目前主题的代码高亮是采用了定制过的 `PrismJS` 插件，支持以下语言，如果列表中的语言未包含你所使用的语言，可以在 [其官网](https://prismjs.com/download.html) 进行定制，替换主题 `static` 目录下的 `prism.js` 文件即可！
 
+- HTML + XML + SVG
+- CSS
+- C-Like
+- JavaScript
+- ASP.NET(C#)
+- Bash + Shell
+- BBCode
+- C
+- C++
+- Docker
+- Git
+- Go
+- Haskell
+- Java
+- JSON
+- Less
+- Markdown
+- Nginx
+- Objective-C
+- Pascal + Object Pascal
+- Perl
+- PHP
+- PowerShell
+- Python
+- Puby
+- SQL
+- Swift
+- TypeScript
+- VIM
 
 # 参考设置
 

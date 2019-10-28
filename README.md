@@ -6,8 +6,8 @@
 
 - [Single 主题](https://docs.paul.ren/single)
 - [Fantasy 主题](https://docs.paul.ren/fantasy)
-- [看版娘插件](https://docs.paul.ren/pio)
- 
+- [看板娘插件](https://docs.paul.ren/pio)
+- [方块播放器](https://docs.paul.ren/square)
 
 ## 开源协议
 
