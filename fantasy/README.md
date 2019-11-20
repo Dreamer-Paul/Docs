@@ -241,3 +241,10 @@ if(typeof _hmt !== 'undefined') _hmt.push(['_trackPageview', location.pathname +
 在 Typecho 后台的导航栏找到 **设置** > **评论** > **评论日期格式** 填写 `Y.m.d`
 
 在 Typecho 后台的导航栏找到 **设置** > **阅读** > **文章日期格式** 填写 `Y.m.d`
+
+## 文章输出
+
+在 Typecho 后台的导航栏找到 **设置** > **阅读**
+
+- 文章列表数目：`6`
+- 每页文章数目：`6`
