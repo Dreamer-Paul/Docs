@@ -37,6 +37,18 @@
             margin: 0 0 .75em;
             text-align: center;
         }
+        
+        .music{
+            top: 0;
+            right: 0;
+            width: 3em;
+            height: 3em;
+            padding: .5em;
+            cursor: pointer;
+            position: fixed;
+        }
+        .music:hover{ transform: scale(1.1) }
+        .music:active{ transform: scale(.9) }
 
         main{
             padding: 1.5em;
@@ -55,7 +67,6 @@
             text-align: center;
             background: #b74f00;
             margin-bottom: .75em;
-            transition: opacity .3s;
         }
         .item:hover{ opacity: .8 }
 
@@ -68,28 +79,44 @@
     </style>
 </head>
 <body>
-  <main>
+<header>
+    <div class="music">
+        <svg viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M427.52 961.92c-96 0-178.56-49.28-197.76-125.44-9.6-38.4-3.2-78.72 19.2-115.84 31.36-52.48 89.6-92.16 160-108.16 16.64-3.84 32.64-6.4 49.28-7.68L348.16 271.36c-7.68-23.04-5.12-48 6.4-69.12 11.52-21.76 32.64-38.4 56.96-44.8L748.8 67.2c18.56-5.12 38.4-0.64 52.48 12.16 14.08 12.16 20.48 30.72 17.92 49.28l-19.84 128c-4.48 28.8-25.6 52.48-54.4 60.16l-224.64 58.88c-17.28 4.48-34.56-5.76-39.04-23.04-4.48-17.28 5.76-34.56 23.04-39.04l224.64-58.88c3.84-1.28 7.04-3.84 7.68-7.68l17.92-115.2-327.04 87.68c-7.68 1.92-13.44 7.04-17.28 13.44-3.2 5.76-3.84 12.8-1.92 19.2L533.12 627.2c3.2 10.24 1.28 21.76-5.76 30.08-7.04 8.32-17.28 12.8-28.16 11.52-24.96-2.56-50.56-0.64-75.52 5.12-52.48 12.8-97.28 42.24-119.68 79.36-9.6 15.36-19.2 39.68-12.16 67.2 15.36 59.52 101.76 92.16 188.8 71.04 52.48-12.8 97.28-42.24 119.68-79.36 9.6-15.36 19.2-39.68 12.16-67.2-1.28-3.84-15.36-46.72-92.8-277.76-5.76-16.64 3.2-35.2 20.48-40.32 16.64-5.76 35.2 3.2 40.32 20.48 91.52 273.28 92.8 279.68 94.08 282.24 9.6 38.4 3.2 78.72-19.2 115.84-31.36 52.48-89.6 92.16-160 108.16-23.04 5.76-46.08 8.32-67.84 8.32z" fill="#fff"></path></svg>
+    </div>
+</header>
+<main>
     <h1>保罗 の 文档站</h1>
     <p>
-      <a class="item" href="https://docs.paul.ren/single">Single 主题</a>
-      <a class="item" href="https://docs.paul.ren/fantasy">Fantasy 主题</a>
-      <a class="item" href="https://docs.paul.ren/pio">看板娘插件</a>
-      <a class="item" href="https://docs.paul.ren/square">方块播放器</a>
+        <a class="item" href="https://docs.paul.ren/single">Single 主题</a>
+        <a class="item" href="https://docs.paul.ren/fantasy">Fantasy 主题</a>
+        <a class="item" href="https://docs.paul.ren/pio">看板娘插件</a>
+        <a class="item" href="https://docs.paul.ren/square">方块播放器</a>
     </p>
     <p><a href="https://paul.ren">返回首页</a></p>
-  </main>
-  <script>
+</main>
+<script>
     // 采用了若叶女孩的官网 https://wakabagirl.com 作为基础设计
     console.log("%c Paul's Docs %c https://paul.ren ","color: #fff; margin: 1em 0; padding: 5px 0; background: #b75f00;","margin: 1em 0; padding: 5px 0; background: #efefef;");
-  </script>
-  <script>
+</script>
+<script>
     var _hmt = _hmt || [];
-    (function() {
+    (function () {
       var hm = document.createElement("script");
       hm.src = "https://hm.baidu.com/hm.js?be5a72d703a505c135ce0d15619f8d86";
       var s = document.getElementsByTagName("script")[0]; 
       s.parentNode.insertBefore(hm, s);
     })();
-  </script>
+</script>
+<script>
+(function () {
+    let player = document.createElement("audio");
+    player.src = "https://music.163.com/song/media/outer/url?id=1356233931";
+    let btn = document.querySelector(".music");
+    
+    btn.onclick = () => {
+        player.paused ? player.play() : player.pause();
+    }
+})();
+</script>
 </body>
 </html>

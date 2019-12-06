@@ -47,7 +47,7 @@
 
 > 其他问题
 
-如果上述内容不符合你所遇到的问题，请加入我的企鹅群（[657692292](https://jq.qq.com/?_wv=1027&k=4Buhabv)）联系群主即时提问交流，也可在 GitHub 的 [Issues](https://github.com/Dreamer-Paul/Fantasy/issues) 区提出。
+如果上述内容不符合你所遇到的问题，请加入提问反馈群（[915297074](https://jq.qq.com/?_wv=1027&k=5Be3Qbk)）或日常交流群（[657692292](https://jq.qq.com/?_wv=1027&k=4Buhabv)）联系群主即时提问交流，也可在 GitHub 的 [Issues](https://github.com/Dreamer-Paul/Fantasy/issues) 区提出。
 
 
 # 主题选项
