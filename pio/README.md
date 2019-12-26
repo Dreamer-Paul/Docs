@@ -113,7 +113,7 @@ var pio = new Paul_Pio({
 
 > 插件无法启用，Typecho 提示插件不存在（还有可能提示 Server Error）
 
-答：请确认插件文件夹名称修改为 `Pio` 而不是 `Pio-master`
+答：请确认插件文件夹名称修改为 `Pio` 而不是 `Pio-master`。近期有人反馈使用部分 <a href="https://racns.com/211.html" rel="nofollow">后台美化模板</a> 后也会出现无法启用插件的情况，修改后台文件本身就是一种影响稳定性的操作，不建议这样做。
 
 > 插件成功启用，打开网站发现没有显示看板娘
 
@@ -153,10 +153,6 @@ location ^~ /model
     add_header Access-Control-Allow-Origin https://paugram.com;
 }
 ```
-
-> 鼠标移动到特定区域后没有任何文字提示
-
-答：IE9 以下浏览器不支持 `querySelectorAll` 方法，因此无法显示。请升级你的浏览器！
 
 > 我使用的模板有 PJAX，切换页面之后看板娘无法显示或报错
 

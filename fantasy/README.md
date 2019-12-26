@@ -187,6 +187,12 @@
 if(typeof _hmt !== 'undefined') _hmt.push(['_trackPageview', location.pathname + location.search]);
 ```
 
+# 文章页面
+
+## 文章插图（赞助版）
+
+如果你使用了“详细”或“卡片”模式，本主题将默认从文章中取第一张图作为文章插图。如果文章内不包含图片，则会自动调用主题 `static\img\article` 文件夹下的 `8` 张图片。你可以选择将文件夹内的图片进行替换，并通过修改 `fantasy.php` 的 `post_image` 函数，实现随机出现更多图片。
+
 # 独立页面
 
 ## 追番页
