@@ -69,6 +69,20 @@
 
 答：1.9 版本已经修复，欢迎下载更新。
 
+> 评论区“几天前”的日期输出形式如何替换成最原始的？
+
+答：编辑主题的 `comments.php` 文件，替换以下内容即可。
+
+```php
+<time class="comment-time"><?php $comments -> created(); ?></time>
+```
+
+替换为：
+
+```php
+<time class="comment-time"><?php $comments -> date(); ?></time>
+```
+
 > 其他问题
 
 如果上述内容不符合你所遇到的问题，请加入提问反馈群（[915297074](https://jq.qq.com/?_wv=1027&k=5Be3Qbk)）或日常交流群（[657692292](https://jq.qq.com/?_wv=1027&k=4Buhabv)）联系群主即时提问交流，也可在 GitHub 的 [Issues](https://github.com/Dreamer-Paul/Single/issues) 区提出。
