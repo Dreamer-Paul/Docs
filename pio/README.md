@@ -199,6 +199,10 @@ l2d.js:1 Uncaught TypeError: Cannot read property '0' of undefined
 }
 ```
 
+> 看板娘隐藏后如何让她再次显示
+
+答：目前 2.4 版默认设计为永久隐藏，你可以通过清除浏览器 localStorage 的方式让她再次出现，这个问题将在下一个版本进行改善。
+
 > 其他问题
 
 如果上述内容不符合你所遇到的问题，请加入提问反馈群（[915297074](https://jq.qq.com/?_wv=1027&k=5Be3Qbk)）或日常交流群（[657692292](https://jq.qq.com/?_wv=1027&k=4Buhabv)）联系群主即时提问交流，也可在 GitHub 的 [Issues](https://github.com/Dreamer-Paul/Pio/issues) 区提出。
@@ -215,6 +219,10 @@ l2d.js:1 Uncaught TypeError: Cannot read property '0' of undefined
 ## 选择外链模型
 
 用于使用外链模型。填写该选项后，上面选择的模型均无效。前台仅显示这里填写的一个模型。
+
+引用的链接建议采用绝对路径（例 `https://paul.ren/static/416/model.json`）而不是相对路径（例 `/static/416/model.json`）否则会导致在不同页面下由于链接 404 错误，无法显示看板娘。
+
+> PS：模型配置文件一般为 `model.json`，请勿引用 `.moc` 文件！
 
 ## 自定位置
 
@@ -296,6 +304,8 @@ var pio = new Paul_Pio({
 ## Content
 
 提示内容一共有以下几个参数可以自行设置，均为选填。如不额外设置参数则为插件默认的提示文字，按照自己的需求填写即可覆盖默认设置。
+
+> PS：如果 JSON 格式错误，将会导致该参数无效，插件加载失败并报错。可以通过使用网上的 JSON 格式化工具，检查自己编写的配置信息是否符合标准。
 
 |参数名|描述|
 |------|----|
