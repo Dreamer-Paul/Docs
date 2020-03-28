@@ -1,8 +1,8 @@
 # 信息
 
-- 最新版本：1.6
-- 上次更新：2020.2.13
-- 上次修订：2020.2.13
+- 最新版本：1.7
+- 上次更新：2020.3.28
+- 上次修订：2020.3.28
 
 
 # 安装
@@ -34,6 +34,14 @@
 将记事本内的设置内容逐一填入主题选项的文本框内。
 
 ## 获取赞助版
+
+赞助版拥有什么功能？
+
+- 夜间模式
+- 三种首页文章布局
+- 更好用的二级菜单
+- 归档、友链、时间轴等多个独立页面
+- 以及更多...
 
 如需使用本主题的赞助版，请加入企鹅群 [915297074](https://jq.qq.com/?_wv=1027&k=5Be3Qbk) 后联系群主获取。
 
@@ -71,6 +79,18 @@
 > 主题没有演示站的图片 / 卡片模式
 
 答：仅赞助版本提供多布局切换，为我打赏 `33.33` 软妹币即可获得该功能。
+
+> 如何增加和修改图片/卡片模式下的文章替代图片？
+
+答：图片文件均存放在主题目录的 `static/img/article` 文件夹，如果打算增加图片数量，需要修改 `fantasy.php` 的 `post_image` 函数。
+
+```php
+if($stat){
+	Typecho_Widget::widget('Widget_Options') -> themeUrl('static/img/article/' . rand(1, 6) . '.jpg');
+}
+```
+
+将 `rand(1, 8)` 这个 1-8 的范围替换成你修改后的范围即可~
 
 > 其他问题
 
@@ -204,6 +224,8 @@
 
 ## 搜索栏显示内容（赞助版）
 
+> PS：此功能在赞助版 1.7 后取消，只输出标签
+
 主题左侧菜单由于构造设计限制，暂不支持二级菜单。文章分类或标签可以在这里找到。当然你可以在 `赞助版` 创建一个 `归档页`，打开就可以看到各分类及其文章
 
 - 标签
@@ -270,6 +292,59 @@ if(typeof _hmt !== 'undefined') _hmt.push(['_trackPageview', location.pathname +
 ## 时间轴页面（赞助版）
 
 在 Typecho 后台的导航栏找到 **管理** > **独立页面** > **新增** > **自定义模板** > **选择 “时间轴”**
+
+
+# 组件要求
+
+## 代码高亮
+
+- 不能与其他插件共用，例如 `Highlight.js`
+- 需要在文章中指定语言（按照下面的示例即可）
+
+
+    ```php
+    echo "Hello Paul!";
+    ```
+
+或者是...
+
+	```javascript
+	ks.notice("It's Dreamer-Paul!", {
+		color: "yellow"
+	});
+	```
+目前主题的代码高亮是采用了定制过的 `PrismJS` 插件，支持以下语言，如果列表中的语言未包含你所使用的语言，可以在 [其官网](https://prismjs.com/download.html) 进行定制，替换主题 `static` 目录下的 `prism.js` 文件即可！
+
+- HTML + XML + SVG
+- CSS
+- C-Like
+- JavaScript
+- ASP.NET(C#)
+- Bash + Shell
+- BBCode
+- C
+- C++
+- Docker
+- Git
+- Go
+- Haskell
+- Java
+- JSON
+- Less
+- Markdown
+- Nginx
+- Objective-C
+- Pascal + Object Pascal
+- Perl
+- PHP
+- PowerShell
+- Python
+- Puby
+- SQL
+- Swift
+- TypeScript
+- VIM
+
 
 # 参考设置
 
