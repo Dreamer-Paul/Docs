@@ -1,3 +1,11 @@
+# 信息
+
+- 最新版本：2.1
+- 上次更新：2020.3.13
+- 上次修订：2020.4.22
+
+文档国内（备用）链接：https://dreamer-paul.gitee.io/docs/single
+
 # 安装
 
 推荐使用 Typecho 的最新正式版本安装本主题，并采用 PHP 7x 作为生产环境。如果你喜欢本项目，不妨为我提供微薄的一份赞助，支持一下吧！
@@ -85,7 +93,7 @@
 
 > 其他问题
 
-如果上述内容不符合你所遇到的问题，请加入提问反馈群（[915297074](https://jq.qq.com/?_wv=1027&k=5Be3Qbk)）或日常交流群（[657692292](https://jq.qq.com/?_wv=1027&k=4Buhabv)）联系群主即时提问交流，也可在 GitHub 的 [Issues](https://github.com/Dreamer-Paul/Single/issues) 区提出。
+如果上述内容不符合你所遇到的问题，请加入群（[915297074](https://jq.qq.com/?_wv=1027&k=5Be3Qbk)）联系群主即时提问交流，也可在 GitHub 的 [Issues](https://github.com/Dreamer-Paul/Pio/issues) 区提出。
 
 
 # 主题选项
@@ -246,11 +254,11 @@
 
 或者是...
 
-	```javascript
-	ks.notice("It's Dreamer-Paul!", {
-		color: "yellow"
-	});
-	```
+    ```javascript
+    ks.notice("It's Dreamer-Paul!", {
+        color: "yellow"
+    });
+    ```
 目前主题的代码高亮是采用了定制过的 `PrismJS` 插件，支持以下语言，如果列表中的语言未包含你所使用的语言，可以在 [其官网](https://prismjs.com/download.html) 进行定制，替换主题 `static` 目录下的 `prism.js` 文件即可！
 
 - HTML + XML + SVG

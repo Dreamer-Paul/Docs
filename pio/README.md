@@ -1,3 +1,11 @@
+# 信息
+
+- 最新版本：2.4
+- 上次更新：2020.3.9
+- 上次修订：2020.4.22
+
+文档国内（备用）链接：https://dreamer-paul.gitee.io/docs/pio
+
 # 安装
 
 推荐使用 Typecho 的最新正式版本安装本插件，并采用 PHP 7x 作为生产环境。如果你喜欢本项目，不妨为我提供微薄的一份赞助，支持一下吧！
@@ -66,10 +74,10 @@
 
 ### 插入 DOM 内容
 
-> PS：在独立使用的情况下，看板娘的对齐位置和高宽无法通过 JS 直接设置，请根据需要自行修改或使用后端语言进行输出。
+> PS：在独立使用的情况下，看板娘的自定位置和高宽无法通过 JS 直接设置，请根据需要自行修改或使用后端语言进行输出。
 
 ```html
-<div class="pio-container {对齐方式}">
+<div class="pio-container {自定位置}">
     <div class="pio-action"></div>
     <canvas id="pio" width="{看板娘宽度}" height="{看板娘高度}"></canvas>
 </div>
@@ -79,9 +87,18 @@
 
 |参数名|允许值|
 |---|---|
-|对齐位置|`left` `right`|
-|看板娘宽度|整数，不带 `px`|
-|看板娘高度|整数，不带 `px`|
+|自定位置|`left` `right`|
+|看板娘宽度|整数，不带 `px`，即 HTML 写法|
+|看板娘高度|整数，不带 `px`，即 HTML 写法|
+
+这是一段示例：
+
+```html
+<div class="pio-container left">
+    <div class="pio-action"></div>
+    <canvas id="pio" width="350" height="350"></canvas>
+</div>
+```
 
 ### 设置启动器
 
@@ -205,7 +222,7 @@ l2d.js:1 Uncaught TypeError: Cannot read property '0' of undefined
 
 > 其他问题
 
-如果上述内容不符合你所遇到的问题，请加入提问反馈群（[915297074](https://jq.qq.com/?_wv=1027&k=5Be3Qbk)）或日常交流群（[657692292](https://jq.qq.com/?_wv=1027&k=4Buhabv)）联系群主即时提问交流，也可在 GitHub 的 [Issues](https://github.com/Dreamer-Paul/Pio/issues) 区提出。
+如果上述内容不符合你所遇到的问题，请加入群（[915297074](https://jq.qq.com/?_wv=1027&k=5Be3Qbk)）联系群主即时提问交流，也可在 GitHub 的 [Issues](https://github.com/Dreamer-Paul/Pio/issues) 区提出。
 
 
 # 后台设置
