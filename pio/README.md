@@ -2,7 +2,7 @@
 
 - 最新版本：2.4
 - 上次更新：2020.3.9
-- 上次修订：2020.5.20
+- 上次修订：2020.7.8
 
 文档国内（备用）链接：https://dreamer-paul.gitee.io/docs/pio
 
@@ -234,7 +234,7 @@ l2d.js:1 Uncaught TypeError: Cannot read property '0' of undefined
 
 > 看板娘隐藏后如何让她再次显示
 
-答：目前 2.4 版默认设计为永久隐藏，你可以通过清除浏览器 localStorage 的方式让她再次出现，这个问题将在下一个版本进行改善。
+答：目前 2.4 版默认设计为永久隐藏，你可以通过清除浏览器 localStorage 的方式（`F12` -> `Application` -> `Local Storage` -> `你的网站` -> `posterGirl` -> `X 删除`）让她再次出现，这个问题将在下一个版本进行改善。
 
 > 其他问题
 

@@ -1,8 +1,8 @@
 # 信息
 
 - 最新版本：2.1
-- 上次更新：2020.3.13
-- 上次修订：2020.4.22
+- 上次更新：2020.7.10
+- 上次修订：2020.7.10
 
 文档国内（备用）链接：https://dreamer-paul.gitee.io/docs/single
 
@@ -291,6 +291,7 @@
 - TypeScript
 - VIM
 
+
 # 参考设置
 
 为了让主题效果最大化的完美呈现，你可以选择参考这里所提供的一些 Typecho 设置。
@@ -307,3 +308,78 @@
 
 - 文章列表数目：`6`
 - 每页文章数目：`6`
+
+
+# 二次开发
+
+## 页眉
+
+主题本身并没有提供展示自定义下拉菜单的功能，但你可以通过修改 `header.php` 的方法实现。这个是二级菜单的结构：
+
+```html
+<div class="has-child">
+    <a>分类</a>
+    <div class="sub-menu">
+        <a href="#1">二级链接</a>
+        <a href="#2">二级链接</a>
+        <a href="#3">二级链接</a>
+    </div>
+</div>
+```
+
+添加到这段 `Widget_Contents_Page_List` 的前后，都是可以的。
+
+```php
+    <nav class="head-menu">
+        <a href="<?php $this -> options -> siteUrl(); ?>">首页</a>
+        <div class="has-child">
+            <a>分类</a>
+            <div class="sub-menu">
+                <?php $this -> widget('Widget_Metas_Category_List') -> parse('<a href="{permalink}">{name}</a>'); ?>
+            </div>
+        </div>
+        // 这个是输出所有页面
+        <?php $this -> widget('Widget_Contents_Page_List') -> parse('<a href="{permalink}">{title}</a>'); ?>
+        // 所以你可以把自己的二级菜单添加到它的前面或者后面
+<?php if($this -> user -> hasLogin()): ?>
+        <a href="<?php $this -> options -> adminUrl(); ?>" target="_blank">进入后台</a>
+<?php endif; ?>
+    </nav>
+```
+
+## 容器
+
+主题的容器框架其实是可以修改间距的，默认为 `min`，你可以试试删掉它，或是改成 `mid` 或者 `max` 试试看？
+
+```html
+<div class="wrap min">
+    <!-- 这个是我的奇趣框架项目内置的 -->
+</div>
+```
+
+## 自定义模板
+
+主题提供了一个预设的「二次开发示例模板」文件 `custom.php`，你可以复制一份用于添加自己的专属功能。该模板提供了主题的基本框架，主要分为：
+
+- 页眉区：`.page-title`
+- 正文区：`.page-content`
+
+你可以参考 Typecho 官方文档 [创建自定义模板](http://docs.typecho.org/themes/custom-theme) 页面，开始你的二次创作！该二次创作内容可以自由使用，包括自用或进行分发。
+
+### 页眉区
+
+个人比较建议加上去，可以保证每个页面的统一性。
+
+```html
+<section class="page-title">
+    <h2>页面标题</h2>
+</section>
+```
+
+### 正文区
+
+```html
+<section class="page-content">
+    <!-- 在这里放入你的功能想输出页面的内容 -->
+</section>
+```
