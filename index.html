@@ -7,21 +7,25 @@
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"/>
     <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1"/>
     <style>
-        html, body{ height: 100% }
+        *{ box-sizing: border-box }
+
         html{
+            height: 100%;
             color: #763300;
-            display: table;
-            margin: 0 auto;
             user-select: none;
         }
         body{
-            width: 50%;
-            padding: 1em;
-            max-width: 50em;
-            display: table-cell;
-            vertical-align: middle;
-            font: 16px "思源黑体 CN";
+            margin: 0;
+            padding: 2em;
+            display: flex;
+            min-height: 100%;
+            flex-direction: column;
+            font: 14px "思源黑体 CN";
             background: url(static/bg.png) center #a9db22;
+        }
+
+        @media screen and (max-width: 768px){
+            body{ font-size: 12px }
         }
 
         a{
@@ -42,8 +46,8 @@
         .music{
             top: 0;
             right: 0;
-            width: 3em;
-            height: 3em;
+            width: 4em;
+            height: 4em;
             padding: .5em;
             cursor: pointer;
             position: fixed;
@@ -52,15 +56,18 @@
         .music:active{ transform: scale(.9) }
 
         main{
+            width: 100%;
+            margin: auto;
             padding: 1.5em;
+            max-width: 40em;
             border-radius: 1em;
-            box-shadow: 0 0 .5em rgba(0, 0, 0, .5);
+            box-shadow: 0 0 0.5em rgba(0, 0, 0, .5);
             border: .25em rgba(169, 219, 34, .3) solid;
-            background: url(static/girl.png) bottom right  no-repeat #fff;
+            background: url(static/girl.png) bottom right no-repeat #fff;
         }
 
         .item{
-            width: 8em;
+            width: 9em;
             color: #fff;
             display: block;
             padding: .75em;
@@ -71,7 +78,7 @@
         }
         .item:hover{ opacity: .8 }
 
-        @media screen and (max-width: 600px){
+        @media screen and (max-width: 768px){
             .item{
                 margin-left: auto;
                 margin-right: auto;
@@ -88,6 +95,7 @@
 <main>
     <h1>保罗 の 文档站</h1>
     <p>
+        <a class="item" href="https://works.paugram.com/style">奇趣框架</a>
         <a class="item" href="single">Single 主题</a>
         <a class="item" href="fantasy">Fantasy 主题</a>
         <a class="item" href="pio">看板娘插件</a>
@@ -113,7 +121,7 @@
     let player = document.createElement("audio");
     player.src = "https://music.163.com/song/media/outer/url?id=1356233931";
     let btn = document.querySelector(".music");
-    
+
     btn.onclick = () => {
         player.paused ? player.play() : player.pause();
     }
