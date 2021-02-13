@@ -2,7 +2,7 @@
 
 - 最新版本：2.1
 - 上次更新：2020.7.10
-- 上次修订：2020.7.10
+- 上次修订：2021.2.13
 
 文档国内（备用）链接：https://dreamer-paul.gitee.io/docs/single
 
@@ -94,6 +94,39 @@
 ```php
 <time class="comment-time"><?php $comments -> date(); ?></time>
 ```
+
+> 如何使用多栏效果？
+
+答：根据 [奇趣框架](https://works.paugram.com/style/grid.html) 栅格的使用方式编写 HTML 代码，可以随意拼凑多种方式使用。一个三栏编写方式如下：
+
+```html
+!!!
+<div class="row">
+    <div class="col-m-4">
+!!!
+
+// 此处即可填写 Markdown 内容
+
+!!!
+    </div>
+    <div class="col-m-4">
+!!!
+
+// 此处即可填写 Markdown 内容
+
+!!!
+    </div>
+    <div class="col-m-4">
+!!!
+
+// 此处即可填写 Markdown 内容
+
+!!!
+    </div>
+</div>
+```
+
+由于 Typecho 的解析方式比较特殊，因此需要带上 `!!!` 划分内容区域。
 
 > 其他问题
 
