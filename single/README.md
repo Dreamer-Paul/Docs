@@ -2,7 +2,7 @@
 
 - 最新版本：2.1
 - 上次更新：2020.7.10
-- 上次修订：2021.2.13
+- 上次修订：2021.4.11
 
 文档国内（备用）链接：https://dreamer-paul.gitee.io/docs/single
 
@@ -127,6 +127,27 @@
 ```
 
 由于 Typecho 的解析方式比较特殊，因此需要带上 `!!!` 划分内容区域。
+
+> 伪静态怎么配置？
+
+答：Nginx 配置：
+
+```bash
+location / {
+    try_files $uri $uri/ $uri.html /index.php?$args;
+}
+```
+
+Apache 配置：
+
+```bash
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteRule index.html$ index.php
+    RewriteRule index-([1-9]+[0-9]*).html$ index.php?p=$1
+    RewriteRule ([a-z]{1,})-([0-9]{1,}).html$ index.php?action=$1&id=$2
+</IfModule>
+```
 
 > 其他问题
 
