@@ -1,8 +1,8 @@
 # 信息
 
 - 最新版本：2.4
-- 上次更新：2020.3.9
-- 上次修订：2020.12.13
+- 上次更新：2021.3.6
+- 上次修订：2021.5.5
 
 文档国内（备用）链接：https://dreamer-paul.gitee.io/docs/pio
 
@@ -238,6 +238,21 @@ l2d.js:1 Uncaught TypeError: Cannot read property '0' of undefined
 > 其他问题
 
 如果上述内容不符合你所遇到的问题，请加入群（[915297074](https://jq.qq.com/?_wv=1027&k=5Be3Qbk)）联系群主即时提问交流，也可在 GitHub 的 [Issues](https://github.com/Dreamer-Paul/Pio/issues) 区提出。
+
+提 Issues 的正确方式，可以参考如下案例：
+
+[关闭看板娘后，重新显示的位置不对](https://github.com/Dreamer-Paul/Pio/issues/21)
+[能否增加自定义边距功能](https://github.com/Dreamer-Paul/Pio/issues/19)
+
+“运行环境”处如果没有出现「后台报错」的情况，可以在对应环境处使用 `/` 留空不填写。
+
+```
+操作系统版本：/
+Apache/Nginx 版本：/
+PHP 版本：/
+插件版本：7d3cac
+浏览器版本：任意新浏览器
+```
 
 
 # 后台设置
