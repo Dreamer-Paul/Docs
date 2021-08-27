@@ -1,3 +1,11 @@
+# 信息
+
+- 最新版本：aad4759
+- 上次更新：2021.8.27
+- 上次修订：2021.8.27
+
+文档国内（备用）链接：https://dreamer-paul.gitee.io/docs/square
+
 # 安装
 
 你可以通过代码直接引用或者通过 Typecho 插件的方式快速使用。如果你喜欢本项目，不妨为我提供微薄的一份赞助，支持一下吧！
@@ -16,13 +24,22 @@
 </head>
 ```
 
-在网页 `body` 标签内的最后一行引用项目的 JS 文件 `SQPlayer.js`：
+在网页 `body` 标签内的最后一行，或使用 `defer` 属性引用项目的 JS 文件 `SQPlayer.js`：
 
 ```html
 <body>
 ...
 <script src="SQPlayer.js"></script>
 </body>
+```
+
+Or...
+
+```html
+<head>
+...
+<script src="SQPlayer.js" defer></script>
+</head>
 ```
 
 在网页 `body` 标签内插入一个 `sqp` 标签：
@@ -86,16 +103,60 @@ Square Player 支持以下属性，它们分别的意义是：
 `data-artist`|艺术家，用于自定义歌曲
 `data-cover`|专辑封面图片链接，用于自定义歌曲
 `data-link`|歌曲地址，用于自定义歌曲
-`data-163`|网易云音乐的 ID 或歌名，如果编写了网易云 ID，将忽略以上歌曲设置
+`data-163`|网易云音乐的 ID，如果编写了此项目，将忽略以上 `data-*` 设置
 
 将以上属性放在 `<sqp>` 标签内即可生效。
 
 # 方法
 
-## init
+## 播放器实例
 
-Square Player 默认会遍历整个页面，如果你的网站使用了 PJAX 技术，不妨试试以下方法重载播放器？
+### Play
+
+播放该实例的音乐
 
 ```javascript
-SQP_Extend.init();
+player.play();
+```
+
+### Pause
+
+暂停该实例的音乐
+
+```javascript
+player.pause();
+```
+
+### Toggle
+
+切换播放/暂停该实例的音乐
+
+```javascript
+player.toggle();
+```
+
+### Destroy
+
+卸载当前实例，释放内存
+
+```javascript
+player.destroy();
+```
+
+## 扩展方法
+
+### Init
+
+遍历页面的 `sqp` 元素，初始化播放器。方块播放器的扩展方法默认会遍历整个页面，如果你的网站使用了 PJAX 技术，在切换页面的同时，不妨试试以下方法重载播放器？
+
+```javascript
+_SQP_Extend.init();
+```
+
+### Destroy
+
+卸载页面的所有播放器实例，释放内存。部分 PJAX 库貌似并没有「离开页面」的事件，没法像 Vue/React 这样的框架可以在生命周期里实现更彻底的内存释放。
+
+```javascript
+_SQP_Extend.destroy();
 ```
