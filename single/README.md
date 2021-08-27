@@ -213,12 +213,43 @@ Apache 配置：
 如果你对主题现在的部分样式不够满意，可以在这里编写自己的 CSS 代码，以改变主题的默认外观。
 
 ```css
-// 让看板娘在夜间模式下变暗
+// 让看板娘在夜间模式下变暗（旧版）
 .neon .pio-container{
     -webkit-filter: brightness(.7);
-    filter: brightness(.7)
+    filter: brightness(.7);
+}
+
+// 最新版
+.dark-theme .pio-container{
+    -webkit-filter: brightness(.7);
+    filter: brightness(.7);
 }
 ```
+
+在最新的版本上，你甚至可以自定义自己的主题颜色！
+
+```css
+// 白天模式颜色（默认）
+:root{
+    --blue: #00bcd4;
+    --light-blue: #11e4ff;
+}
+
+// 夜间模式颜色
+.dark-theme{
+    --blue: #00bcd4;
+    --light-blue: #11e4ff;
+}
+```
+
+|变量名称|默认颜色|说明|
+|---|---|---|
+|--blue|#6f9fc7|默认蓝|
+|--light-blue|#9fcff7|亮蓝|
+|--border|#ddd|默认边框|
+|--dark-border|#ccc|深边框|
+|--light-border|#eee|亮边框|
+|--light-background|#fff|亮背景|
 
 ## 统计代码
 
