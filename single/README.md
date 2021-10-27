@@ -2,7 +2,7 @@
 
 - 最新版本：2.1
 - 上次更新：2021.6.18
-- 上次修订：2021.9.30
+- 上次修订：2021.10.27
 
 文档国内（备用）链接：https://dreamer-paul.gitee.io/docs/single
 
@@ -157,7 +157,7 @@ Apache 配置：
 
 > 为什么主题免费开源？
 
-答：这是我做的第一款 Typecho 主题，抱着学习的态度制作而成。并且希望借此主题扩展人脉、结识更多的大佬和同道之人。当然你可以为我 [打赏](https://paugram.com/about.html#donate)，给我的博客提供微薄的帮助。这样我以后就可以给大家带来更好的作品和文章了。
+答：这是我做的第一款 Typecho 主题，抱着学习的态度制作而成。并且希望借此主题扩展人脉、结识更多的大佬和同道之人。当然你可以为我 [打赏](https://paul.ren/donate)，给我的博客提供微薄的帮助。这样我以后就可以给大家带来更好的作品和文章了。
 
 > 本主题的 WordPress 版有 BUG？
 
@@ -169,7 +169,7 @@ Apache 配置：
 
 > 其他问题
 
-如果上述内容不符合你所遇到的问题，请加入群（[915297074](https://jq.qq.com/?_wv=1027&k=5Be3Qbk)）联系群主即时提问交流，也可在 GitHub 的 [Issues](https://github.com/Dreamer-Paul/Pio/issues) 区提出。
+如果上述内容不符合你所遇到的问题，请加入群（[915297074](https://jq.qq.com/?_wv=1027&k=5Be3Qbk)）联系群主即时提问交流，也可在 GitHub 的 [Issues](https://github.com/Dreamer-Paul/Single/issues) 区提出。
 
 
 # 主题选项
