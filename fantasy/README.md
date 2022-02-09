@@ -95,9 +95,31 @@
 
 裂开主要是因为国内网络环境问题导致，根据文章 [Typecho 一些冷门小技巧](https://paugram.com/coding/typecho-secret-usage.html) 自定义一个 Gravatar 源，即可解决。
 
-> 如何增加和修改图片/卡片模式下的文章替代图片？
+> 如何增加和修改图片/卡片模式下的随机文章替代图片？
 
-答：图片文件均存放在主题目录的 `static/img/article` 文件夹，如果打算增加图片数量，需要修改 `fantasy.php` 的 `post_image` 函数。
+答：图片文件均存放在主题目录的 `static/img/article` 文件夹，如果打算增加图片数量，需要再额外修改 `fantasy.php` 的 `post_image` 函数，主题默认存在 6 张图片。
+
+```text
+1.jpg
+2.jpg
+3.jpg
+4.jpg
+5.jpg
+6.jpg
+```
+
+2022 年 2 月后的新版本，修改变量 `$images_pool_start` 和 `$images_pool_end` 以调整图片区间范围。
+
+```php
+// 随机图片池
+static $images_pool_start = 1;
+static $images_pool_end = 6;
+
+static $images_pool = null;
+static $images_pool_pointer = 0;
+```
+
+之前的老版本，修改 `rand` 函数内的两个参数，将 `rand(1, 8)` 这个 1-8 的范围替换成你修改后的范围即可~
 
 ```php
 if($stat){
@@ -105,7 +127,7 @@ if($stat){
 }
 ```
 
-将 `rand(1, 8)` 这个 1-8 的范围替换成你修改后的范围即可~ 覆盖更新主题可能会导致这里失效，注意进行识别！
+覆盖更新主题时会导致这里失效，注意进行识别！
 
 > 如何使用多栏效果？
 
@@ -139,6 +161,24 @@ if($stat){
 ```
 
 由于 Typecho 的解析方式比较特殊，因此需要带上 `!!!` 划分内容区域。
+
+> 我的表格内容太长，存在溢出页面或换行严重的情况，怎么改善？
+
+答：根据 [奇趣框架](https://works.paugram.com/style/elements.html#table) 表格的使用方式增加一层 `ks-table` 的 DIV 容器，就可以解决这个问题。如果要禁止换行，可以在额外设置一条 `text-nowrap` 的类名。
+
+```html
+!!!
+<div class="ks-table text-nowrap">
+!!!
+
+// 此处即可填写 Markdown 表格内容
+
+!!!
+</div>
+!!!
+```
+
+以上两种方式，均仅限在使用「奇趣框架」的主题和网站上使用，而保罗的主题均采用这个框架进行设计。
 
 ## 服务端相关
 
