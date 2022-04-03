@@ -224,7 +224,17 @@ Apache 配置：
 
 ## 其他问题
 
+> 开源版还维护吗
+
+答：目前来说「开源版本」确实属于停摆状态，应该不会有太大的改动和更新。欢迎来关注下本主题的「赞助版本」。
+
+> 关于 Fork 和 PR
+
+答：开源版默认公开于社区，你可以自由的 Fork 项目，魔改出自己的版本，也可将部分功能进行 PR（需要得到作者同意），但不可进行二次销售。
+
 > 其他问题
+
+关于 Typecho 使用的一些奇怪的问题，你可以先阅读一下作者的这篇文章《[Typecho 一些冷门小技巧](https://paugram.com/coding/typecho-secret-usage.html)》，还可以在博客上以「typecho」为关键词尝试搜索其他文章。
 
 如果上述内容不符合你所遇到的问题，请加入群（[915297074](https://jq.qq.com/?_wv=1027&k=5Be3Qbk)）联系群主即时提问交流，也可在 GitHub 的 [Issues](https://github.com/Dreamer-Paul/Fantasy/issues) 区提出。
 
