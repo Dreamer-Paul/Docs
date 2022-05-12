@@ -2,7 +2,7 @@
 
 - 最新版本：1.8.5
 - 上次更新：2022.4.2
-- 上次修订：2022.4.3
+- 上次修订：2022.5.12
 
 文档国内（备用）链接：https://dreamer-paul.gitee.io/docs/fantasy
 
@@ -226,7 +226,7 @@ Apache 配置：
 
 > 开源版还维护吗
 
-答：目前来说「开源版本」确实属于停摆状态，应该不会有太大的改动和更新。欢迎来关注下本主题的「赞助版本」。
+答：目前来说「开源版本」确实属于停摆状态，和赞助版相差了太多进度了，目前应该不会有太大的改动和更新了。欢迎来关注下本主题的「赞助版本」。
 
 > 关于 Fork 和 PR
 
@@ -259,7 +259,7 @@ Apache 配置：
 
 ## 社交链接
 
-参考下方格式编写，就可以实现我博客的效果了
+参考下方格式编写，就可以实现我博客的效果了！更多图标可以参考 [FontAwesome](https://fontawesome.com/v4) 的文档，主题暂时没有想要升级到最新版本的打算（毕竟商业化了，感觉性质变了）
 
 ```html
 <a rel="nofollow" title="新浪微博" href="http://weibo.com/234891753" target="_blank">
@@ -282,6 +282,51 @@ Apache 配置：
 ## 自定义样式表
 
 如果你对主题现在的部分样式不够满意，可以在这里编写自己的 CSS 代码，以改变主题的默认外观。
+
+> 赞助版本已经采用 CSS3 变量设置主题颜色，你可以通过在这里编写代码，以修改默认的颜色！
+
+```css
+// 白天模式颜色（默认）
+:root{
+    --blue: #b1c6ff;
+    --gray: #777790;
+    --pink: #ffa9be;
+    --gray-bg: #fafafa;
+    --light-bg: #fff;
+    --light-font: #777790;
+    --light-border: #ddd;
+    --thin-shadow: 0 0 10px rgba(119, 119, 144, .2);
+    --thick-shadow: 0 0 20px rgba(119, 119, 144, .4);
+}
+
+// 夜间模式颜色
+@media screen and (prefers-color-scheme: dark){
+    :root{
+        --pink: #d38d9f;
+        --gray-bg: rgba(255, 255, 255, .3);
+        --light-bg: #222;
+        --light-font: #b0b0bf;
+        --light-border: #555;
+
+        --thin-shadow: 0 0 10px rgba(255, 255, 255, .5);
+        --thick-shadow: 0 0 20px rgba(255, 255, 255, .8);
+    }
+}
+```
+
+|变量名称|默认颜色|说明|
+|---|---|---|
+|--blue|#b1c6ff|默认蓝|
+|--gray|#777790|默认灰|
+|--pink|#ffa9be|默认粉|
+|--gray-bg|#fafafa|默认背景灰|
+|--light-bg|#fff|默认背景亮|
+|--light-font|#777790|默认字体亮|
+|--light-border|#ddd|默认边框亮|
+|--thin-shadow|0 0 10px rgba(119, 119, 144, .2)|默认细阴影|
+|--thick-shadow|0 0 20px rgba(119, 119, 144, .4)|默认粗阴影|
+
+更多 CSS 变量，可自行使用浏览器的开发工具查看！
 
 ## 统计代码
 
