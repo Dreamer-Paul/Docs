@@ -1,8 +1,8 @@
 # 信息
 
 - 最新版本：1.0
-- 上次更新：2021.10.27
-- 上次修订：2021.10.27
+- 上次更新：2023.2.12
+- 上次修订：2023.2.12
 
 文档国内（备用）链接：https://dreamer-paul.gitee.io/docs/hingle
 
@@ -28,6 +28,27 @@
 ## Themes: https://hexo.io/themes/
 theme: hingle
 ```
+
+从 [提交 286f581](https://github.com/Dreamer-Paul/Hingle/commit/286f581d99684baa053464554b823761acbe3f16) 开始，本项目不再支持 HighlightJS 代码高亮，你需要修改 Hexo 目录下 `_config.yml` 文件的相关字段，确保更换成 Prism。
+
+```yml
+highlight:
+  enable: false # 关闭 Highlight
+  line_number: true
+  auto_detect: false
+  tab_replace: ''
+  wrap: true
+  hljs: false
+prismjs:
+  enable: true # 开启 Prism
+  preprocess: true
+  line_number: true
+  tab_replace: ''
+```
+
+如果修改后代码高亮并未生效，可尝试执行 `hexo clean` 命令修复这个问题。
+
+> 以上配置，亦可参考 [Hingle-Demo](https://github.com/Dreamer-Paul/Hingle-Demo/blob/master/_config.yml) 项目进行设置。
 
 修改主题目录下的 `_config.yml` 文件，可参考 `_config.example.yml` 文件和当前文档进行设置。
 
