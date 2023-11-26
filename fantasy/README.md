@@ -1,8 +1,8 @@
 # 信息
 
-- 最新版本：1.8.5
-- 上次更新：2022.4.2
-- 上次修订：2023.10.4
+- 最新版本：1.9
+- 上次更新：2023.11.26
+- 上次修订：2023.11.26
 
 文档国内（备用）链接：https://dreamer-paul.gitee.io/docs/fantasy
 
@@ -439,6 +439,26 @@ Apache 配置：
 - 最近评论
 - 标签云
 - 站点信息
+
+## 自定义 CDN 服务商（赞助版）
+
+主题默认使用 JSDelivr 用于加速服务，可以根据你网站的主要访客来源，使用合适的加速服务
+
+- StaticFile
+    - [官网](https://www.staticfile.org)
+    - CDN 加速由七牛云提供，技术社区掘金支持
+- BootCDN
+    - [官网](https://www.bootcdn.cn)
+    - BootCDN 联合 Bootstrap 中文网 共同支持并维护的前端开源项目免费 CDN 服务
+- JSDelivr
+    - [官网](https://www.jsdelivr.com)
+    - 为开源项目免费提供的国际化 CDN 服务
+    - 在国内存在阻断现象，可使用 CDNJS 作为替代
+- CDNJS
+    - [官网](https://cdnjs.com)
+    - 由 CloudFlare 提供支持的免费加速服务，国内外均可使用
+
+面向国内外用户选择 CDNJS，优先国内用户选择 StaticFile 和 BootCDN，优先海外用户可选择 JSDelivr 和 CDNJS。
 
 ## 文章展现风格（赞助版）
 
