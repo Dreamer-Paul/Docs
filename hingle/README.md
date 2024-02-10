@@ -200,6 +200,15 @@ social:
 </a>
 ```
 
+[6a77b96](https://github.com/Dreamer-Paul/Hingle/commit/6a77b9614a742f09b295f1697f0b53b5fb040d8a) 版本后支持插入自定义的 SVG 图标，使用属性 `svg` 替换掉 `icon`，插入对应的图标即可。这里推荐使用 [RemixIcon](https://remixicon.com)，免费开源。
+
+```yml
+social:
+  - title: 'B 站'
+    svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">...</svg>'
+    link: 'https://space.bilibili.com/124512959'
+```
+
 ## Background
 
 自定义站点的背景图片，字符串类型，默认没有启用这个设置项。如要启用，在此编写一段有效的 URL 即可完成。
