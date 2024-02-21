@@ -1,8 +1,8 @@
 # 信息
 
 - 最新版本：2.1
-- 上次更新：2022.2.25
-- 上次修订：2023.10.4
+- 上次更新：2024.2.9
+- 上次修订：2024.2.21
 
 文档国内（备用）链接：https://dreamer-paul.gitee.io/docs/single
 
@@ -257,6 +257,14 @@ Apache 配置：
 </a>
 <a rel="nofollow" title="小窝" href="https://paul.ren" target="_blank">
     <i class="fa fa-home"></i>
+</a>
+```
+
+[8a69d9](https://github.com/Dreamer-Paul/Single/commit/8a69d901c859fc3338d25cc9b1727ebe02c7cfd1) 版本后支持插入自定义的 SVG 图标，使用 `svg` 元素替换掉 `i` 元素即可。这里推荐使用 [RemixIcon](https://remixicon.com)，免费开源。
+
+```html
+<a rel="nofollow" title="BiliBili" href="https://space.bilibili.com/124512959" target="_blank">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">...</svg>
 </a>
 ```
 
