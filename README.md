@@ -8,6 +8,9 @@
 - [Fantasy 主题](https://docs.paul.ren/fantasy)
 - [看板娘插件](https://docs.paul.ren/pio)
 - [方块播放器](https://docs.paul.ren/square)
+- [Hingle 主题](https://docs.paul.ren/hingle)
+
+源代码不在本仓库的项目文档：
 
 - [奇趣框架](https://works.paugram.com/style)
 - [奇趣播放器](https://works.paugram.com/player)
