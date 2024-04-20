@@ -1,8 +1,8 @@
 # 信息
 
-- 最新版本：aad4759
-- 上次更新：2021.8.27
-- 上次修订：2021.8.27
+- 最新版本：608b5a9
+- 上次更新：2024.4.20
+- 上次修订：2024.4.20
 
 文档国内（备用）链接：https://dreamer-paul.gitee.io/docs/square
 
@@ -52,13 +52,13 @@ Or...
 </body>
 ```
 
-如果使用 `data-163` 属性引用播放器，就写成这样，其中 `23682511` 就是一首歌的 ID。
+如果使用 `data-cid` 属性引用播放器，就写成这样，其中 `23682511` 就是网易云音乐一首歌的 ID。
 
 ```html
-<sqp data-163="23682511"></sqp>
+<sqp data-cid="23682511"></sqp>
 ```
 
-如果使用静态方法引用播放器，就需要同时编写四个属性。
+如果使用静态方法引用播放器，则需要同时编写四个属性。
 
 ```html
 <sqp data-title="Crimson & Clover" data-artist="Tommy James" data-cover="封面链接" data-link="歌曲链接"></sqp>
@@ -88,7 +88,7 @@ Or...
 
 ```html
 !!!
-<sqp data-163="23682511"></sqp>
+<sqp data-cid="23682511"></sqp>
 !!!
 ```
 
@@ -103,7 +103,7 @@ Square Player 支持以下属性，它们分别的意义是：
 `data-artist`|艺术家，用于自定义歌曲
 `data-cover`|专辑封面图片链接，用于自定义歌曲
 `data-link`|歌曲地址，用于自定义歌曲
-`data-163`|网易云音乐的 ID，如果编写了此项目，将忽略以上 `data-*` 设置
+`data-cid`|网易云音乐的 ID，如果编写了此项目，将忽略以上 `data-*` 设置
 
 将以上属性放在 `<sqp>` 标签内即可生效。
 
@@ -151,6 +151,14 @@ player.destroy();
 
 ```javascript
 _SQP_Extend.init();
+```
+
+项目默认使用的是由 Meto 提供的网易云 API，你也可以修改此处代码，将服务替换为 [保罗的 API](https://api.paugram.com)。
+
+```javascript
+window._SQP_Extend = new SQP_Extend({
+  server: "paul"
+});
 ```
 
 ### Destroy
