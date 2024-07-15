@@ -2,9 +2,7 @@
 
 - 最新版本：2.4
 - 上次更新：2022.8.11
-- 上次修订：2022.8.11
-
-文档国内（备用）链接：https://dreamer-paul.gitee.io/docs/pio
+- 上次修订：2024.7.8
 
 # 安装
 
@@ -42,7 +40,7 @@
 
 你是 Typecho 新手吗？不妨先观看一下本视频后再进行操作吧！[访问原站观看](https://www.bilibili.com/video/av47815909) 将支持展示 CC 字幕！
 
-<iframe src="//player.bilibili.com/player.html?aid=47815909&amp;cid=83754339&amp;page=1" scrolling="no" allowfullscreen="true" style="width: 100%; height: 35em; height: 60vmin"> </iframe>
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=47815909&bvid=BV1Kb411s7h4&cid=83754339&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 
 ## 独立使用
 
